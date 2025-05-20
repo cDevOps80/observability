@@ -8,3 +8,11 @@ groups:
           severity: CRITICAL
         annotations:
           summary: Node Down Alert
+
+      - alert: upp
+        expr: up < 1
+        for: 1m
+        labels:
+          severity: CRITICAL
+        annotations:
+          summary: Node Down Alert
