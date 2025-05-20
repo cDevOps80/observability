@@ -38,7 +38,8 @@ scrape_configs:
     relabel_configs:
       - source_labels: [__meta_ec2_tag_Name]
         target_label: instance_name
-
+      - source_labels: [__meta_ec2_tag_monitor]
+        target_label: monitor
       - source_labels: [__meta_ec2_instance_type]
         target_label: instance_type
 
