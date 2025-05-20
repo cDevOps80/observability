@@ -13,6 +13,6 @@ groups:
         expr: up < 1
         for: 1m
         labels:
-          severity: CRITICAL
+          severity: sample
         annotations:
           summary: Node Down Alert
