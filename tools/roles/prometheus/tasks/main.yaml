@@ -26,8 +26,16 @@
     dest: /opt/prometheus-2.53.4.linux-amd64/alerts_rules.yml
     owner: bin
     group: bin
+
+- name: Update AlertManager configuration
+  ansible.builtin.template:
+    src: alertmanager.yml
+    dest: /opt/alertmanager/alertmanager.yml
+    owner: bin
+    group: bin
   notify:
     - alert
+
 
 - name: Start Prometheus Service
   ansible.builtin.systemd_service:
@@ -36,9 +44,3 @@
     enabled: yes
     daemon-reload: yes
 
-- name: Start alert Service
-  ansible.builtin.systemd_service:
-    name: alertmanager
-    state: restarted
-    enabled: yes
-    daemon-reload: yes
