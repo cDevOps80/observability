@@ -22,32 +22,32 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
 
-  - job_name: "instance"
-    static_configs:
-        - targets: ["172.31.90.226:9100"]
-          labels:
-            name: chaitu
+#  - job_name: "instance"
+#    static_configs:
+#        - targets: ["172.31.90.226:9100"]
+#          labels:
+#            name: chaitu
 
   - job_name: "containers"
     static_configs:
       - targets: ["172.31.88.161:9882"]
 
-  - job_name: "Dynamic"
-    ec2_sd_configs:
-      - region: us-east-1
-        port: 9100
-        filters:
-          - name: tag:monitor
-            values: ["yes"]
-    relabel_configs:
-      - source_labels: [__meta_ec2_tag_Name]
-        target_label: instance_name
-      - source_labels: [__meta_ec2_tag_monitor]
-        target_label: monitor
-      - source_labels: [__meta_ec2_instance_type]
-        target_label: instance_type
-
-      - source_labels: [__meta_ec2_availability_zone]
-        target_label: az
+#  - job_name: "Dynamic"
+#    ec2_sd_configs:
+#      - region: us-east-1
+#        port: 9100
+#        filters:
+#          - name: tag:monitor
+#            values: ["yes"]
+#    relabel_configs:
+#      - source_labels: [__meta_ec2_tag_Name]
+#        target_label: instance_name
+#      - source_labels: [__meta_ec2_tag_monitor]
+#        target_label: monitor
+#      - source_labels: [__meta_ec2_instance_type]
+#        target_label: instance_type
+#
+#      - source_labels: [__meta_ec2_availability_zone]
+#        target_label: az
 
 
