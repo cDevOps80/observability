@@ -7,7 +7,7 @@
     dest: /opt
     remote_src: yes
     owner: bin
-    creates: /opt/prometheus-2.53.4.linux-amd64
+    #creates: /opt/prometheus-2.53.4.linux-amd64
 
 - name: Copy Prometheus Service File
   ansible.builtin.template:
