@@ -1,0 +1,11 @@
+route:
+  receiver: sns-notifications
+
+receivers:
+  - name: sns-notifications
+    sns_configs:
+      - sigv4:
+          region: us-east-1
+        topic_arn: arn:aws:sns:us-east-1:339712959230:observability-topic
+        subject: "Prometheus Alert"
+        message: 'Instance Alert'
