@@ -9,7 +9,7 @@ resource "aws_instance" "main" {
 resource "aws_route53_record" "public" {
   name    = "${var.tags["Name"]}"
   type    = "A"
-  zone_id = ""
+  zone_id = "Z06926562JRB6HEXD0QMM"
   records = [aws_instance.main.public_ip]
   ttl     = 10
 }
