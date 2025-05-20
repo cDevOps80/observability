@@ -1,12 +1,13 @@
 - name: Set Name in Prompt
   ansible.builtin.shell: set-hostname prometheus
 
-#- name: Download Prometheus
-#  ansible.builtin.unarchive:
-#    src: https://github.com/prometheus/prometheus/releases/download/v2.53.4/prometheus-2.53.4.linux-amd64.tar.gz
-#    dest: /opt
-#    remote_src: yes
-#    owner: bin
+- name: Download Prometheus
+  ansible.builtin.unarchive:
+    src: https://github.com/prometheus/prometheus/releases/download/v2.53.4/prometheus-2.53.4.linux-amd64.tar.gz
+    dest: /opt
+    remote_src: yes
+    owner: bin
+    creates: /opt/prometheus-2.53.4.linux-amd64
 
 - name: Copy Prometheus Service File
   ansible.builtin.template:
