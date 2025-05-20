@@ -3,7 +3,7 @@ variable "servers" {
   default = {
     prometheus = {
       ami           = "ami-0b4f379183e5706b9"
-      instance_type = "t3.medium"
+      instance_type = "t3a.medium"
       tags          =  {
         Name = "prometheus"
         monitor = "yes"
