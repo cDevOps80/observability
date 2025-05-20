@@ -6,6 +6,7 @@ variable "servers" {
       instance_type = "t3.small"
       tags          =  {
         Name = "prometheus"
+        monitor = "yes"
       }
     }
   }

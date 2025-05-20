@@ -27,3 +27,11 @@ scrape_configs:
         - targets: ["172.31.90.226:9100"]
           labels:
             name: chaitu
+
+  - job_name: "Dynamic"
+    ec2_sd_config:
+      - region: us-east-1
+        filters:
+          - name: monitor
+            values: yes
+
