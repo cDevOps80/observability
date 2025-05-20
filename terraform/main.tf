@@ -8,5 +8,10 @@ module "ec2" {
 }
 
 
+module "sns" {
+  source = "./modules/sns"
+}
+
+
 
 
