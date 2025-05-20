@@ -19,6 +19,14 @@
     src: prometheus.yml
     dest: /opt/prometheus-2.53.4.linux-amd64/prometheus.yml
 
+
+- name: Update Alerts
+  ansible.builtin.template:
+    src: alerts_rules.yml
+    dest: /opt/prometheus-2.53.4.linux-amd64/alerts_rules.yml
+    owner: bin
+    group: bin
+
 - name: Start Prometheus Service
   ansible.builtin.systemd_service:
     name: prometheus
