@@ -8,7 +8,7 @@ alerting:
   alertmanagers:
     - static_configs:
         - targets:
-          # - alertmanager:9093
+         # - alertmanager:9093
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
@@ -28,9 +28,9 @@ scrape_configs:
 #          labels:
 #            name: chaitu
 
-  - job_name: "containers"
-    static_configs:
-      - targets: ["172.31.88.161:9882"]
+#  - job_name: "containers"
+#    static_configs:
+#      - targets: ["172.31.88.161:9882"]
 
 #  - job_name: "Dynamic"
 #    ec2_sd_configs:
