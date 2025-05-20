@@ -1,5 +1,5 @@
 - name: Set Name in Prompt
-  ansible.builtin.shell: set-prompt prometheus
+  ansible.builtin.shell: set-hostname prometheus
 
 - name: Download Prometheus
   ansible.builtin.unarchive:
