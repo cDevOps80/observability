@@ -1,7 +1,8 @@
 resource "aws_instance" "main" {
-  ami =  var.ami
-  instance_type = var.instance_type
+  ami                    =  var.ami
+  instance_type          = var.instance_type
   vpc_security_group_ids = ["sg-0665a56c7cd09a0e0"]
+  iam_instance_profile   = aws_iam_instance_profile.admin.name
   instance_market_options {
     market_type = "spot"
     spot_options {
