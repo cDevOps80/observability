@@ -2,4 +2,4 @@ name: Installing {{ tool_name }}
 hosts: all
 become: true
 roles:
-  - {{ tool_name }}
+  - "{{ tool_name }}"
