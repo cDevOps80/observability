@@ -33,5 +33,5 @@ scrape_configs:
       - region: us-east-1
         filters:
           - name: "monitor"
-            values: "yes"
+            values: ["yes"]
 
