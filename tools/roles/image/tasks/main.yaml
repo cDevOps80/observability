@@ -5,6 +5,9 @@
     recreate: true
     pull: true
     restart: true
+    env:
+      TOKEN: {{ TOKEN }}
+      NAME: "{{ item }}"
   loop:
     - runner-1
     - runner-2
