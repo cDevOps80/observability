@@ -1,8 +1,9 @@
 - name: Create a data container
   community.docker.docker_container:
-    name: docker
-    image: nginx
+    name: "{{ item }}"
+    image: docker.io/chaitu1812/git-image
     pull: always
-    env:
-      arg1: "true"
-      arg2: "whatever"
+    restart: true
+  loop:
+    - runner-1
+
