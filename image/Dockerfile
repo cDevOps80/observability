@@ -7,6 +7,7 @@ RUN      curl -o actions-runner-linux-x64-2.325.0.tar.gz -L https://github.com/a
 RUN      tar xzf ./actions-runner-linux-x64-2.325.0.tar.gz
 COPY     build.sh .
 RUN      chown -R  github:github /actions
+RUN      chmod 777 build.sh
 USER     github
 CMD      ["./build.sh"]
 
