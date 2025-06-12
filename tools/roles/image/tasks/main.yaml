@@ -1,0 +1,7 @@
+- name: Create a data container
+  community.docker.docker_container:
+    name: docker.io/nginx
+    image: busybox
+    env:
+      arg1: "true"
+      arg2: "whatever"
