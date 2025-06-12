@@ -9,7 +9,7 @@ COPY     build.sh .
 RUN      chown -R  github:github /actions
 RUN      chmod 777 build.sh
 USER     github
-CMD      ["./build.sh"]
+CMD      ["bash", "build.sh"]
 
 
 
