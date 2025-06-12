@@ -6,7 +6,7 @@
     pull: true
     restart: true
     env:
-      TOKEN: {{ TOKEN }}
+      TOKEN: "{{ TOKEN }}"
       NAME: "{{ item }}"
   loop:
     - runner-1
