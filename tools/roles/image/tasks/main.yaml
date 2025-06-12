@@ -6,4 +6,5 @@
     restart: true
   loop:
     - runner-1
+    - runner-2
 
