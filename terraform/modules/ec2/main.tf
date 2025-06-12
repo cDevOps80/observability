@@ -10,7 +10,6 @@ resource "aws_instance" "main" {
       spot_instance_type             = "persistent"
     }
   }
-
   tags  = var.tags
 }
 
