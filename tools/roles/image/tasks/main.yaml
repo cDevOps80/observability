@@ -2,7 +2,7 @@
   community.docker.docker_container:
     name: "{{ item }}"
     image: docker.io/chaitu1812/git-image
-    pull: "always"
+    pull: always
     restart: true
   loop:
     - runner-1
